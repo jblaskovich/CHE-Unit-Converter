@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHE Unit Converter</title>
+<link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link rel = "stylesheet" href="styles.css">
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CHE Unit Converter</h1>
+    </div>
+
+    <div class='btn-group'>
+
+      <button class = "absoluteViscosityBtn">absolute viscosity</button>
+      <ul class="absoluteViscosityConversions"></ul>
+      <ul class="add-absoluteViscosity-unit-list"></ul>
+
+      <button class = "areaBtn">area</button>
+      <ul class="areaConversions"></ul>
+      <ul class="add-area-unit-list"></ul>
+
+      <button class = "densityBtn">density</button>
+      <ul class="densityConversions"></ul>
+      <ul class="add-density-unit-list"></ul>
+
+      <button class = "diffusivityBtn">diffusivity</button>
+      <ul class="diffusivityConversions"></ul>
+      <ul class="add-diffusivityViscosity-unit-list"></ul>
+
+      <button class = "energyBtn">energy</button>
+      <ul class="energyConversions"></ul>
+      <ul class="add-energy-unit-list"></ul>
+
+      <button class = "energyFluxBtn">energy flux</button>
+      <ul class="energyFluxConversions"></ul>
+      <ul class="add-energyFlux-unit-list"></ul>
+
+      <button class = "energyPerMassBtn">energy per unit mass</button>
+      <ul class="energyPerMassConversions"></ul>
+      <ul class="add-energyPerMass-unit-list"></ul>
+
+      <button class = "forceBtn">force</button>
+      <ul class="forceConversions"></ul>
+      <ul class="add-force-unit-list"></ul>
+
+      <button class = "heatCapacityBtn">heat capacity</button>
+      <ul class="heatCapacityConversions"></ul>
+      <ul class="add-heatCapacity-unit-list"></ul>
+
+      <button class = "heatTransferCoefficientBtn">heat transfer coefficient</button>
+      <ul class="heatTransferCoefficientConversions"></ul>
+      <ul class="add-heatTransferCoefficient-unit-list"></ul>
+
+      <button class = "kinematicViscosityBtn">kinematic viscosity</button>
+      <ul class="kinematicViscosityConversions"></ul>
+      <ul class="add-kinematicViscosity-unit-list"></ul>
+
+      <button class = "lengthBtn">length</button>
+      <ul class="lengthConversions"></ul>
+      <ul class="add-length-unit-list"></ul>
+
+      <button class = "massBtn">mass</button>
+      <ul class="massConversions"></ul>
+      <ul class="add-mass-unit-list"></ul>
+
+      <button class = "massFlowrateBtn">mass flowrate</button>
+      <ul class="massFlowrateConversions"></ul>
+      <ul class="add-mass-flowrate-unit-list"></ul>
+
+      <button class = "powerBtn">power (energy rate)</button>
+      <ul class="powerConversions"></ul>
+      <ul class="add-powerFlux-unit-list"></ul>
+
+      <button class = "pressureBtn">pressure</button>
+      <ul class="pressureConversions"></ul>
+      <ul class="add-pressure-unit-list"></ul>
+
+
+      <button class = "temperatureBtn">temperature</button>
+        <div id = temperature-units>
+          <div id = "kelvin">
+            <input type="number" placeholder = "0.0000"><span class = "temperature-unit-symbol">K</span>
+          </div>
+          <div id = "celsius">
+          <input type="number" placeholder = "0.0000"><span class = "temperature-unit-symbol">C</span>
+          </div>
+          <div id = "rankine">
+            <input type="number" placeholder = "0.0000"><span class = "temperature-unit-symbol">R</span>
+          </div>
+          <div id = "fahreinheit">
+          <input type="number" placeholder = "0.0000"><span class = "temperature-unit-symbol">F</span>
+          </div>
+        </div>
+
+      <button class = "thermalConductivityBtn">thermal conductivity</button>
+      <ul class="thermalConductivityConversions"></ul>
+      <ul class="add-thermalConductivityCoefficient-unit-list"></ul> 
+
+      <button class = "volumeBtn">volume</button>
+      <ul class="volumeConversions"></ul>
+      <ul class="add-volume-unit-list"></ul>
+
+      <button class = "volumeFlowrateBtn">volume flowrate</button>
+      <ul class="volumeFlowrateConversions"></ul>
+      <ul class="add-volumeFlowrate-unit-list"></ul>
+
+    </div>
+
+  </div>
+
+  <script type="module" src = "mass.js"></script>
+  <script type="module" src = "massFlowrate.js"></script>
+  <script type="module" src = "length.js"></script>
+  <script type="module" src = "area.js"></script>
+  <script type="module" src = "volume.js"></script>
+  <script type="module" src = "volumeFlowrate.js"></script>
+  <script type="module" src = "force.js"></script>
+  <script type="module" src = "pressure.js"></script>
+  <script type="module" src = "energy.js"></script>
+  <script type="module" src = "energyPerMass.js"></script>
+  <script type="module" src = "energyFlux.js"></script>
+  <script type="module" src = "power.js"></script>
+  <script type="module" src = "absoluteViscosity.js"></script>
+  <script type="module" src = "kinematicViscosity.js"></script>
+  <script type="module" src = "diffusivity.js"></script>
+  <script type="module" src = "density.js"></script>
+  <script type="module" src = "heatCapacity.js"></script>
+  <script type="module" src = "heatTransferCoefficient.js"></script>
+  <script type="module" src = "temperature.js"></script>
+  <script type="module" src = "thermalConductivity.js"></script>
+
+</body>
+</html>

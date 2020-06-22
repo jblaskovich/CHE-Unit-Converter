@@ -1,0 +1,1 @@
+This is a simple unit converter application tailored toward chemical engineers.  To use, launch the executable file in the release-builds folder for the operating system of interest.

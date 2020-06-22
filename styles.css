@@ -1,0 +1,750 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: darkgray;
+  color: whitesmoke;
+}
+
+
+.container {
+  width: 530px;
+  height:583px;
+  margin: 10px auto;
+  user-select: none;
+  position: relative;
+  overflow-x: hidden;
+  border: 1px solid black;
+  background-color: steelblue;
+}
+
+.header {
+  background-color: rgb(32, 31, 31);
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.header h1 {
+  font-size: 1.25rem;
+}
+
+.btn-group button {
+  background-color: green;
+  border: 1px solid black;
+  color: white;
+  padding: 5px 24px;
+  cursor: pointer;
+  width: 38%;
+  display: block;
+  font-size: 13px;
+}
+
+.btn-group button:hover {
+  background-color:rgb(4, 61, 4);
+}
+
+ul.massConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.mass-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.massConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.massBtn.open {
+  background-color:red;
+}
+
+.massBtn.open + ul.massConversions {
+  left:220px
+}
+
+
+
+ul.massFlowrateConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.mass-flowrate-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.massFlowrateConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.massFlowrateBtn.open {
+  background-color:red;
+}
+
+.massFlowrateBtn.open + ul.massFlowrateConversions {
+  left: 220px;
+}
+
+
+
+ul.lengthConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.length-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.lengthConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.lengthBtn.open {
+  background-color:red;
+}
+
+.lengthBtn.open + ul.lengthConversions {
+  left: 220px;
+}
+
+
+ul.areaConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.area-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.areaConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.areaBtn.open {
+  background-color:red;
+}
+
+.areaBtn.open + ul.areaConversions {
+  left: 220px;
+}
+
+
+ul.volumeConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.volume-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.volumeConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.volumeBtn.open {
+  background-color:red;
+}
+
+.volumeBtn.open + ul.volumeConversions {
+  left: 220px;
+}
+
+ul.volumeFlowrateConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.volumeFlowrate-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.volumeFlowrateConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.volumeFlowrateBtn.open {
+  background-color:red;
+}
+
+.volumeFlowrateBtn.open + ul.volumeFlowrateConversions {
+  left: 220px;
+}
+
+
+ul.forceConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.force-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.forceConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.forceBtn.open {
+  background-color:red;
+}
+
+.forceBtn.open + ul.forceConversions {
+  left: 220px;
+}
+
+
+ul.pressureConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.pressure-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.pressureConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.pressureBtn.open {
+  background-color:red;
+}
+
+.pressureBtn.open + ul.pressureConversions {
+  left: 220px;
+}
+
+ul.energyConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.energy-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.energyConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.energyBtn.open {
+  background-color:red;
+}
+
+.energyBtn.open + ul.energyConversions {
+  left: 220px;
+}
+
+ul.energyPerMassConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.energyPerMass-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.energyPerMassConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.energyPerMassBtn.open {
+  background-color:red;
+}
+
+.energyPerMassBtn.open + ul.energyPerMassConversions {
+  left: 220px;
+}
+
+ul.energyFluxConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.energyFlux-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.energyFluxConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.energyFluxBtn.open {
+  background-color:red;
+}
+
+.energyFluxBtn.open + ul.energyFluxConversions {
+  left: 220px;
+}
+
+ul.powerConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.power-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.powerConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.powerBtn.open {
+  background-color:red;
+}
+
+.powerBtn.open + ul.powerConversions {
+  left: 220px;
+}
+
+
+ul.absoluteViscosityConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.absoluteViscosity-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.absoluteViscosityConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.absoluteViscosityBtn.open {
+  background-color:red;
+}
+
+.absoluteViscosityBtn.open + ul.absoluteViscosityConversions {
+  left: 220px;
+}
+
+ul.kinematicViscosityConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.kinematicViscosity-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.kinematicViscosityConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.kinematicViscosityBtn.open {
+  background-color:red;
+}
+
+.kinematicViscosityBtn.open + ul.kinematicViscosityConversions {
+  left: 220px;
+}
+
+ul.diffusivityConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.diffusivity-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.diffusivityConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.diffusivityBtn.open {
+  background-color:red;
+}
+
+.diffusivityBtn.open + ul.diffusivityConversions {
+  left: 220px;
+}
+
+ul.densityConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.density-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.densityConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.densityBtn.open {
+  background-color:red;
+}
+
+.densityBtn.open + ul.densityConversions {
+  left: 220px;
+}
+
+ul.heatCapacityConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.heatCapacity-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.heatCapacityConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.heatCapacityBtn.open {
+  background-color:red;
+}
+
+.heatCapacityBtn.open + ul.heatCapacityConversions {
+  left: 220px;
+}
+
+
+ul.heatTransferCoefficientConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.heatTransferCoefficient-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.heatTransferCoefficientConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.heatTransferCoefficientBtn.open {
+  background-color:red;
+}
+
+.heatTransferCoefficientBtn.open + ul.heatTransferCoefficientConversions {
+  left: 220px;
+}
+
+ul.thermalConductivityConversions {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+.thermalConductivity-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+ul.thermalConductivityConversions p.input input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+.thermalConductivityBtn.open {
+  background-color:red;
+}
+
+.thermalConductivityBtn.open + ul.thermalConductivityConversions {
+  left: 220px;
+}
+
+#temperature-units {
+  position: absolute;
+  top: 50px;
+  left: 105%;
+
+  color: black;
+  width: 50%;
+  height: 20%;
+  padding: 5px;
+  font-size: 16px;
+
+  transition: all 0.5s;
+}
+
+#temperature-units input {
+  font-size: 16px;
+  width: 60%;
+  padding: 3px;
+}
+
+/* removes arrows from temperature input boxes */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.temperature-unit-symbol {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.temperatureBtn.open {
+  background-color:red;
+}
+.temperatureBtn.open + #temperature-units {
+  left: 221px;
+}
+
