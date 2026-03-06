@@ -10,15 +10,15 @@ let mainWindow;
 app.on('ready', function() {
     //create new window
     mainWindow = new BrowserWindow({
-        width: 600,
-        height: 670,
-        title: "CHE Unit Converter"
+        width: 960,
+        height: 720,
+        title: "CHE Tools"
 
     });
 
     //load html into window
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'landing.html'),
         protocol: 'file:',
         slashes: true
     }));
