@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vessel Volume Calculator</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="vessel-page">
+  <div class="vessel-wrapper">
+
+    <!-- Header -->
+    <div class="vessel-header">
+      <a href="landing.html" class="back-btn vessel-back"><i class="fas fa-arrow-left"></i> Home</a>
+      <div class="vessel-header-title">
+        <span class="vessel-header-cat">EQUIPMENT</span>
+        <h1 class="vessel-title">Vessel Volume &amp; Level Calculation</h1>
+      </div>
+      <div class="vessel-units-selector">
+        <label for="globalUnits">Units:</label>
+        <select id="globalUnits">
+          <option value="ft">ft</option>
+          <option value="in">in</option>
+          <option value="m">m</option>
+          <option value="cm">cm</option>
+          <option value="mm">mm</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="vessel-intro">
+      Estimates volume filled in a vessel with Ellipsoidal (2:1 Elliptical), Spherical (Hemispherical),
+      Torispherical (ASME F&amp;D) and Flat heads.
+    </p>
+
+    <!-- Three-column body -->
+    <div class="vessel-body">
+
+      <!-- ── Column 1: Data ── -->
+      <div class="vessel-col vessel-data-col">
+        <h2 class="vcol-heading">Data</h2>
+
+        <div class="vfield">
+          <label class="vfield-label">Orientation</label>
+          <select id="orientation" class="vselect">
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+          </select>
+        </div>
+
+        <div class="vfield">
+          <label class="vfield-label">Vessel Head</label>
+          <select id="headType" class="vselect">
+            <option value="ellipsoidal">Ellipsoidal</option>
+            <option value="hemispherical">Hemispherical (Spherical)</option>
+            <option value="asme_fd">Torispherical (ASME F&amp;D)</option>
+            <option value="flat">Flat</option>
+          </select>
+        </div>
+
+        <div class="vfield">
+          <div id="headFormulaBox" class="vformula-box">For 2:1 Elliptical Head, a = D/4</div>
+        </div>
+
+        <div class="vfield">
+          <label class="vfield-label">Diameter, D</label>
+          <div class="vinput-row">
+            <input id="diameter" class="vinput" type="number" min="0" step="any" placeholder="0.00">
+            <span class="vunit-badge" id="badge-D">ft</span>
+          </div>
+        </div>
+
+        <div class="vfield">
+          <label class="vfield-label">Straight Length, L</label>
+          <div class="vinput-row">
+            <input id="shellLength" class="vinput" type="number" min="0" step="any" placeholder="0.00">
+            <span class="vunit-badge" id="badge-L">ft</span>
+          </div>
+        </div>
+
+        <div class="vfield">
+          <label class="vfield-label">Inside Dish Depth, a</label>
+          <div class="vinput-row">
+            <input id="dishDepth" class="vinput" type="number" min="0" step="any" placeholder="0.00">
+            <span class="vunit-badge" id="badge-a">ft</span>
+          </div>
+          <p class="vfield-hint">Auto-filled from head type. Override if needed.</p>
+        </div>
+
+        <div class="vfield">
+          <label class="vfield-label">Level, H</label>
+          <div class="vinput-row">
+            <input id="liquidLevel" class="vinput" type="number" min="0" step="any" placeholder="0.00">
+            <span class="vunit-badge" id="badge-H">ft</span>
+          </div>
+        </div>
+
+        <div id="calcError" class="verror"></div>
+      </div>
+
+      <!-- ── Column 2: Calibration ── -->
+      <div class="vessel-col vessel-calib-col">
+        <h2 class="vcol-heading">Calibration</h2>
+        <table class="calib-table" id="calibTable">
+          <thead>
+            <tr>
+              <th>Level<br>%</th>
+              <th>Level<br>(<span id="calib-unit-hdr">ft</span>)</th>
+              <th>Volume<br>(US gal)</th>
+            </tr>
+          </thead>
+          <tbody id="calibBody">
+            <tr><td colspan="3" class="calib-empty">Enter vessel dimensions to generate table.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── Column 3: Result ── -->
+      <div class="vessel-col vessel-result-col">
+        <h2 class="vcol-heading">Result</h2>
+        <div id="results" style="display:none;">
+          <table class="result-table">
+            <tbody>
+              <tr>
+                <td class="res-label">Filled Volume</td>
+                <td class="res-unit">US gal</td>
+                <td class="res-value" id="res-filled-gal">—</td>
+              </tr>
+              <tr>
+                <td class="res-label">Total Volume</td>
+                <td class="res-unit">US gal</td>
+                <td class="res-value" id="res-total-gal">—</td>
+              </tr>
+              <tr class="res-divider">
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <td class="res-label">Filled Volume</td>
+                <td class="res-unit">m³</td>
+                <td class="res-value" id="res-filled-m3">—</td>
+              </tr>
+              <tr>
+                <td class="res-label">Total Volume</td>
+                <td class="res-unit">m³</td>
+                <td class="res-value" id="res-total-m3">—</td>
+              </tr>
+              <tr class="res-divider">
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <td class="res-label">Filled Volume</td>
+                <td class="res-unit">ft³</td>
+                <td class="res-value" id="res-filled-ft3">—</td>
+              </tr>
+              <tr>
+                <td class="res-label">Total Volume</td>
+                <td class="res-unit">ft³</td>
+                <td class="res-value" id="res-total-ft3">—</td>
+              </tr>
+              <tr class="res-divider">
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <td class="res-label">% Full</td>
+                <td class="res-unit"></td>
+                <td class="res-value res-pct" id="res-pct">—</td>
+              </tr>
+              <tr id="total-height-row" style="display:none;">
+                <td class="res-label">Total Height</td>
+                <td class="res-unit" id="res-height-unit">ft</td>
+                <td class="res-value" id="res-total-height">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="no-results" class="no-results-msg">Enter dimensions and level to see results.</div>
+
+        <!-- Vessel SVG diagram -->
+        <div class="vessel-diagram-wrap">
+          <svg id="vesselDiagram" width="220" height="150" viewBox="0 0 220 150">
+            <text x="110" y="80" text-anchor="middle" fill="#aaa" font-size="12">
+              Enter data to render diagram
+            </text>
+          </svg>
+        </div>
+      </div>
+
+    </div><!-- /vessel-body -->
+  </div><!-- /vessel-wrapper -->
+
+  <script src="vesselCalc.js"></script>
+</body>
+</html>

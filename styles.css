@@ -748,3 +748,370 @@ input::-webkit-inner-spin-button {
   left: 221px;
 }
 
+/* ═══════════════════════════════════════════════
+   Back button (used in index.html header)
+═══════════════════════════════════════════════ */
+.back-btn {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.back-btn:hover { opacity: 1; }
+
+.header {
+  position: relative;
+}
+
+/* ═══════════════════════════════════════════════
+   Landing page
+═══════════════════════════════════════════════ */
+.landing-container {
+  width: 530px;
+  height: 400px;
+}
+
+.landing-body {
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.landing-subtitle {
+  font-size: 0.95rem;
+  color: whitesmoke;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.landing-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  padding: 18px 20px;
+  background-color: green;
+  border: 1px solid black;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  gap: 6px;
+}
+.landing-nav-btn:hover { background-color: rgb(4, 61, 4); }
+
+.landing-icon {
+  font-size: 1.6rem;
+}
+
+.landing-btn-label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.landing-btn-desc {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ═══════════════════════════════════════════════
+   Vessel page – overall layout
+═══════════════════════════════════════════════ */
+.vessel-page {
+  background-color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
+  color: #111;
+  min-height: 100vh;
+}
+
+.vessel-wrapper {
+  width: 900px;
+  min-height: 640px;
+  margin: 10px auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* ── vessel header ── */
+.vessel-header {
+  background-color: rgb(32, 31, 31);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  gap: 16px;
+  border-bottom: 2px solid #c0392b;
+  position: relative;
+}
+
+.vessel-back {
+  font-size: 0.82rem;
+  color: whitesmoke;
+  text-decoration: none;
+  opacity: 0.8;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: static;
+  transform: none;
+}
+.vessel-back:hover { opacity: 1; }
+
+.vessel-header-title { flex: 1; }
+
+.vessel-header-cat {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: #c0392b;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.vessel-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: whitesmoke;
+}
+
+.vessel-units-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: whitesmoke;
+  flex-shrink: 0;
+}
+
+.vessel-units-selector select {
+  font-size: 0.8rem;
+  padding: 2px 4px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #666;
+}
+
+/* intro text */
+.vessel-intro {
+  font-size: 0.78rem;
+  color: #555;
+  padding: 8px 16px 4px;
+  border-bottom: 1px solid #eee;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* ── three-column body ── */
+.vessel-body {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px 12px;
+  gap: 0;
+}
+
+.vessel-col {
+  padding: 0 12px;
+}
+
+.vessel-data-col   { width: 240px; flex-shrink: 0; border-right: 1px solid #e0e0e0; }
+.vessel-calib-col  { width: 296px; flex-shrink: 0; border-right: 1px solid #e0e0e0; }
+.vessel-result-col { flex: 1; min-width: 200px; }
+
+.vcol-heading {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+  margin: 0 0 12px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+/* ── data column fields ── */
+.vfield {
+  margin-bottom: 10px;
+}
+
+.vfield-label {
+  display: block;
+  font-size: 0.78rem;
+  color: #444;
+  margin-bottom: 3px;
+  font-family: Arial, sans-serif;
+}
+
+.vfield-hint {
+  font-size: 0.68rem;
+  color: #888;
+  margin-top: 2px;
+  font-family: Arial, sans-serif;
+}
+
+.vselect {
+  width: 100%;
+  padding: 5px 6px;
+  font-size: 0.82rem;
+  border: 1px solid #c0392b;
+  border-radius: 0;
+  background: white;
+  color: #111;
+  font-family: Arial, sans-serif;
+}
+
+.vinput-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.vinput {
+  flex: 1;
+  padding: 5px 7px;
+  font-size: 0.85rem;
+  border: 1px solid #c0392b;
+  border-right: none;
+  border-radius: 0;
+  font-family: Arial, sans-serif;
+  color: #111;
+  background: white;
+}
+.vinput:focus { outline: none; border-color: #922b21; }
+
+/* remove number input arrows */
+.vinput::-webkit-outer-spin-button,
+.vinput::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.vunit-badge {
+  background-color: #c0392b;
+  color: white;
+  padding: 0 10px;
+  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  min-width: 32px;
+  justify-content: center;
+}
+
+.vformula-box {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  font-size: 0.73rem;
+  color: #555;
+  font-family: Arial, sans-serif;
+  line-height: 1.35;
+}
+
+.verror {
+  color: #c0392b;
+  font-size: 0.75rem;
+  font-family: Arial, sans-serif;
+  min-height: 16px;
+  margin-top: 4px;
+}
+
+/* ── calibration table ── */
+.calib-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+}
+
+.calib-table th {
+  background-color: #c0392b;
+  color: white;
+  padding: 5px 8px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.calib-table td {
+  padding: 4px 8px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  color: #222;
+}
+
+.calib-table tr:nth-child(even) td { background-color: #fafafa; }
+
+.calib-table tr.calib-active td {
+  background-color: #fadbd8;
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.calib-empty {
+  color: #aaa;
+  font-style: italic;
+  padding: 12px 8px !important;
+}
+
+/* ── result column ── */
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  margin-bottom: 12px;
+}
+
+.result-table td { padding: 5px 6px; }
+
+.res-label {
+  color: #444;
+  width: 50%;
+}
+
+.res-unit {
+  color: #c0392b;
+  font-weight: bold;
+  width: 20%;
+}
+
+.res-value {
+  color: #111;
+  font-weight: bold;
+  text-align: right;
+  width: 30%;
+}
+
+.res-pct {
+  color: #1a5276;
+}
+
+.res-divider td {
+  padding: 2px 0 !important;
+  border-top: 1px solid #eee;
+}
+
+.no-results-msg {
+  color: #aaa;
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  padding: 6px 0 10px;
+}
+
+/* ── vessel diagram ── */
+.vessel-diagram-wrap {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 6px 0;
+}
